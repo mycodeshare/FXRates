@@ -1,0 +1,42 @@
+﻿@model TestSite1.Models.BaseCurrency
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BaseCurrency</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.disclaimer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.disclaimer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.license)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.license)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.timestamp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.timestamp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.baseData)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.baseData)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

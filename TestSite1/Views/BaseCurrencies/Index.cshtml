@@ -1,0 +1,94 @@
+﻿@model IEnumerable<TestSite1.Models.BaseCurrency>
+
+@{
+    ViewData["Title"] = "Base Currency - USD";
+}
+
+<h2>Base Currency - USD</h2>
+
+<p>
+    <a asp-action="Create">Refresh from Currency Rates Service (openexchangerates.org)</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+            @Html.DisplayNameFor(model => model.disclaimer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.license)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.timestamp)
+            </th>
+            <th>
+                Base Currency
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rates[0].CAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rates[0].AED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rates[0].AFN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rates[0].ALL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rates[0].AMD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rates[0].ANG)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.disclaimer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.license)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.baseData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rates[0].CAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rates[0].AED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rates[0].AFN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rates[0].ALL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rates[0].AMD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rates[0].ANG)
+            </td>
+            @*<td>
+            <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+        </td>*@
+        </tr>
+        }
+
+
+
+
+    </tbody>
+</table>
